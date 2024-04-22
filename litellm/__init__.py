@@ -49,6 +49,7 @@ azure_key: Optional[str] = None
 anthropic_key: Optional[str] = None
 replicate_key: Optional[str] = None
 cohere_key: Optional[str] = None
+clarifai_key: Optional[str] = None
 maritalk_key: Optional[str] = None
 ai21_key: Optional[str] = None
 openrouter_key: Optional[str] = None
@@ -366,6 +367,30 @@ replicate_models: List = [
     "replit/replit-code-v1-3b:b84f4c074b807211cd75e3e8b1589b6399052125b4c27106e43d47189e8415ad",
 ]
 
+clarifai_models: List = [
+    "clarifai/openai.chat-completion.GPT-4",
+    "clarifai/anthropic.completion.claude-2_1"
+    "clarifai/meta.Llama-2.llama2-13b-chat",
+    "clarifai/mistralai.completion.mistral-7B-Instruct",
+    'clarifai/openai.chat-completion.gpt-4-turbo', 
+    'clarifai/openai.chat-completion.GPT-4', 
+    'clarifai/anthropic.completion.claude-3-opus', 
+    'clarifai/anthropic.completion.claude-v2', 
+    'clarifai/anthropic.completion.claude-2_1', 
+    'clarifai/anthropic.completion.claude-v1', 
+    'clarifai/anthropic.completion.claude-instant-1_2', 
+    'clarifai/meta.Llama-3.Llama-3-8B-Instruct', 
+    'clarifai/meta.Llama-2.llama2-70b-chat', 
+    'clarifai/mistralai.completion.mistral-large', 
+    'clarifai/mistralai.completion.mistral-small', 
+    'clarifai/mistralai.completion.mistral-medium', 
+    'clarifai/mistralai.completion.mixtral-8x22B', 
+    'clarifai/upstage.solar.solar-10_7b-instruct', 
+    'clarifai/gcp.generate.gemini-pro', 
+    'clarifai/databricks.drbx.dbrx-instruct'
+    
+]
+
 huggingface_models: List = [
     "meta-llama/Llama-2-7b-hf",
     "meta-llama/Llama-2-7b-chat-hf",
@@ -470,6 +495,7 @@ provider_list: List = [
     "text-completion-openai",
     "cohere",
     "cohere_chat",
+    "clarifai",
     "anthropic",
     "replicate",
     "huggingface",
@@ -608,6 +634,7 @@ from .llms.anthropic import AnthropicConfig
 from .llms.anthropic_text import AnthropicTextConfig
 from .llms.replicate import ReplicateConfig
 from .llms.cohere import CohereConfig
+from .llms.clarifai import ClarifaiConfig
 from .llms.ai21 import AI21Config
 from .llms.together_ai import TogetherAIConfig
 from .llms.cloudflare import CloudflareConfig

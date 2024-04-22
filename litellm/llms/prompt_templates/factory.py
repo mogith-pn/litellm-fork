@@ -1272,6 +1272,7 @@ def prompt_factory(
 ):
     original_model_name = model
     model = model.lower()
+    print(f" custom_llm_provider: {custom_llm_provider}, and name of model in factory.py: {model}")
     if custom_llm_provider == "ollama":
         return ollama_pt(model=model, messages=messages)
     elif custom_llm_provider == "anthropic":
@@ -1306,6 +1307,9 @@ def prompt_factory(
                 return anthropic_pt(messages=messages)
         elif "mistral." in model:
             return mistral_instruct_pt(messages=messages)
+    elif custom_llm_provider == "clarifai":
+        if "claude" in model:
+            return anthropic_pt(messages=messages)
     elif custom_llm_provider == "perplexity":
         for message in messages:
             message.pop("name", None)
