@@ -91,7 +91,6 @@ def convert_model_to_url(model: str, api_base: str):
 
 def get_prompt_model_name(url: str):
     clarifai_model_name = url.split("/")[-2]
-    print(clarifai_model_name)
     if "claude" in clarifai_model_name:
         return "anthropic", clarifai_model_name.replace("_", ".")
     if ("llama" in clarifai_model_name)or ("mistral" in clarifai_model_name):
