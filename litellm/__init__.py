@@ -386,8 +386,7 @@ clarifai_models: List = [
     'clarifai/anthropic.completion.claude-instant-1_2', 
     'clarifai/anthropic.completion.claude-instant', 
     'clarifai/anthropic.completion.claude-v2',
-    'clarifai/anthropic.completion.claude-2_1', 
-    'clarifai/anthropic.completion.claude-3-opus',
+    'clarifai/anthropic.completion.claude-2_1',
     'clarifai/meta.Llama-2.codeLlama-70b-Python',
     'clarifai/meta.Llama-2.codeLlama-70b-Instruct',
     'clarifai/openai.completion.gpt-3_5-turbo-instruct', 
@@ -426,7 +425,12 @@ clarifai_models: List = [
     'clarifai/databricks.Dolly-v2.dolly-v2-12b', 
     'clarifai/bigcode.code.StarCoder', 
     'clarifai/salesforce.xgen.xgen-7b-8k-instruct', 
-    'clarifai/mosaicml.mpt.mpt-7b-instruct',     
+    'clarifai/mosaicml.mpt.mpt-7b-instruct',  
+    'clarifai/anthropic.completion.claude-3-opus',
+    'clarifai/anthropic.completion.claude-3-sonnet',
+    'clarifai/gcp.generate.gemini-1_5-pro',
+    'clarifai/gcp.generate.imagen-2',
+    'clarifai/salesforce.blip.general-english-image-caption-blip-2', 
 ]
 
 
