@@ -11082,7 +11082,7 @@ class CustomStreamWrapper:
             completion_tokens = len(encoding.encode(text))
             return {
                 "text": text,
-                "is_finished": True,
+                "is_finished": False,
             }
         except:
             traceback.print_exc()
